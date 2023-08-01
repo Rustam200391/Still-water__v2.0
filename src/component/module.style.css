@@ -1,0 +1,8 @@
+.close {
+    display: flex;
+    justify-content: space-around;
+}
+
+.close__button {
+    color: brown;
+}

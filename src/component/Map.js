@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from 'react';
-
 import loader from '../utils/googleMapsLoader';
 
 const Map = ({ address }) => {

@@ -1,13 +1,31 @@
 import Image from 'next/image';
-import styles from './page.module.css';
+"use client"; // This is a client component
+import style from './page.module.css'
+import React, { useState } from 'react';
+import ModalComponent from '../component/Modal';
 import Map from '../component/Map';
 
+
 const Home = () => {
-  const address = 'Nizami kuc 10, Baku, Azerbaijan';
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsOpen(false);
+  }
+
+  let address = 'Nizami kuc 10, Baku, Azerbaijan';
   
   return (
     <div>
-      <h1>Google Maps Example</h1>
+      <h1 className={style.name__app}>Useful water</h1>
+      <div className={style.open__modal}>
+        <button className={style.open__modal_button} onClick={openModal} >Добавить источник питьевой воды</button> 
+        <ModalComponent isOpen={isOpen} onClose={closeModal} /> 
+        </div>
       <Map address={address} />
     </div>
   );

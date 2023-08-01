@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import style from "./module.style.css";
+import style from "./style.module.css";
 
 // контеннт модального окна
 
@@ -8,6 +8,14 @@ const customModalContent = (
   <div className={style.close}>
     <h2>Модальное окно</h2>
     <p>Содержимое модального окна</p>
+    <input
+      type="file"
+      //переименовать кнопку
+      id="file"
+      name="Upload an Image"
+      placeholder="Upload an Image"
+      required
+    />
   </div>
 );
 

@@ -1,13 +1,16 @@
 .name__app {
   text-align: center;
   background-color: rgb(22, 239, 239);
+  border-radius: 45px;
 }
 
 .open__modal {
   display: flex;
   justify-content: space-around;
- background-color: rgb(22, 239, 239);
+  border-radius: 45px;
+  background-color: rgb(22, 239, 239);
 }
+/* поменять стили содержимого модального окна */
 
 .open__modal_button {
   color: aquamarine;

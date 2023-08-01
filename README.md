@@ -27,8 +27,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+Tasks:
+
 Parsing error : Cannot find module 'next/babel'
 In your NextJS Project you have this file , named .eslintrc.json, In this file.
+
+Solution:
 
 You have following code
 
@@ -40,6 +44,13 @@ Replace it with.
 {
   "extends": ["next/babel","next/core-web-vitals"]
 }
+
+Tasks:
+Next.js Error: Hooks are not Allowed in Server Components
+
+Solution: If you want to use hooks in your Next.js application, you need to use client components, which are components that run on the browser and have access to state and lifecycle methods. Client components can use hooks such as useState, useEffect, useRef, useContext, useRouter, and any custom hooks that use them.
+
+To use client components in Next.js, you need to add the use client directive as the first line of your file (before any imports).
 
 ## Deploy on Vercel
 

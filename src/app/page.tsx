@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import Map from '../component/Map';
 
 const Home = () => {
-  const address = '1600 Amphitheatre Parkway, Mountain View, CA';
+  const address = 'Cavadkhan 10, Baku, Azerbaijan';
   
   return (
     <div>

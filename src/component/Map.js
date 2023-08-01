@@ -12,7 +12,7 @@ const Map = ({ address }) => {
         if (status === 'OK') {
           const mapOptions = {
             center: results[0].geometry.location,
-            zoom: 16,
+            zoom: 50,
           };
           const newMap = new window.google.maps.Map(
             document.getElementById('map'),
@@ -27,7 +27,7 @@ const Map = ({ address }) => {
       });
     });
   }, [address]);
-  return <div id="map" style={{ height: '400px' }}></div>;
+  return <div id="map" style={{ height: '700px' }}></div>;
 };
 
 export default Map;

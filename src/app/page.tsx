@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import Map from '../component/Map';
 
 const Home = () => {
-  const address = 'Cavadkhan 10, Baku, Azerbaijan';
+  const address = 'Nizami kuc 10, Baku, Azerbaijan';
   
   return (
     <div>

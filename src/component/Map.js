@@ -12,7 +12,7 @@ const Map = ({ address }) => {
         if (status === 'OK') {
           const mapOptions = {
             center: results[0].geometry.location,
-            zoom: 50,
+            zoom: 14,
           };
           const newMap = new window.google.maps.Map(
             document.getElementById('map'),

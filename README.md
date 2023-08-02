@@ -5,7 +5,7 @@
 First, run the development server:
 
 
-npm run de
+npm run d
 
 
 

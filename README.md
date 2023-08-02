@@ -4,7 +4,7 @@
 
 First, run the development server:
 
-```b
+```
 npm run de
 
 

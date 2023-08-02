@@ -9,7 +9,7 @@ npm run dev
 # or
 yarn dev
 # or
-p
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

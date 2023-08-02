@@ -1,8 +1,34 @@
-.close {
+
+.modal {
+    background-color: aqua;
+}
+.block {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+/* форма модалки с ее полями */
+.block__title__photo {
+    left: 2px;
+}
+
+.close__title {
+    text-align: center;
+    margin: 0px;
+}
+
+.block__upload {
+    border-radius: 45px;
+}
+
+.add__block__description {
     display: flex;
     justify-content: space-around;
 }
 
 .close__button {
     color: brown;
+    justify-content: flex-end;
+    width: 45px;
+
 }

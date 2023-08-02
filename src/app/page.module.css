@@ -1,3 +1,5 @@
+
+
 .name__app {
   text-align: center;
   background-color: rgb(22, 239, 239);
@@ -17,6 +19,8 @@
   border-radius: 45px;
   background-color: rgb(13, 176, 176);
 }
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

@@ -1,13 +1,22 @@
 
 .modal {
-    background-color: aqua;
+    background: url("https://apa.az/storage/news/2023/february/20/big/63f35765b3e2563f35765b3e26167689200563f35765b3e2363f35765b3e24.jpg") no-repeat;
+    background-size: cover;
+    color: ivory;
+    text-shadow: 1px 1px 2px blue;
 }
 .block {
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    margin: 0;
+    min-height: 542px;
+    cursor: pointer;
 }
 /* форма модалки с ее полями */
+.block__information {
+    display: grid;
+    justify-content: center;
+}
 .block__title__photo {
     left: 2px;
 }
@@ -18,12 +27,31 @@
 }
 
 .block__upload {
-    border-radius: 45px;
+    border-radius: 4px;
+}
+
+.block__title__place {
+    display: flex;
+    justify-content: space-between;
+}
+.block__title__place input {
+    min-width: 167px;
+    /* min-height: 100px; */
+}
+
+.block__title__photo {
+    display: flex;
+    justify-content: space-between;
 }
 
 .add__block__description {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.add__block__description textarea {
+    width: 169px;
+    height: 97px;
 }
 
 .close__button {

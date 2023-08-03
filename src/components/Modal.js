@@ -16,9 +16,9 @@ const ModalComponent = ({ isOpen, onClose }) => (
     {customModalContent}
 
     <div className={style.block}>
-      <div>
-        <div>
-          <label for="name-sources">Наименование источника</label>
+      <div className={style.block__information}>
+        <div className={style.block__title__place}>
+          <label for="name-sources">Наименование</label>
           <input
             type="text"
             name="name-sources"
@@ -26,12 +26,17 @@ const ModalComponent = ({ isOpen, onClose }) => (
           />
         </div>
         <div className={style.block__title__place}>
-          <label htmlFor="input">Район местоположения</label>
+          <label htmlFor="name-sources">Местоположение</label>
           <input
             type="text"
             name="name-sources"
             className={style.block__title}
           />
+        </div>
+
+        <div className={style.add__block__description}>
+          <label htmlFor="input">Описание</label>
+          <textarea id="story" name="story" rows="5" cols="13" />
         </div>
         <div className={style.block__title__photo}>
           <label name="Upload an Image" className={style.add__block}>
@@ -47,14 +52,15 @@ const ModalComponent = ({ isOpen, onClose }) => (
             className={style.block__upload}
           />
         </div>
-        <div className={style.add__block__description}>
-          <label htmlFor="input">Краткое описание</label>
-          <textarea id="story" name="story" rows="5" cols="13" />
-        </div>
       </div>
       <div>
         <button className={style.close__button} onClick={onClose}>
-          X
+          <img
+            src="https://www.magicwaters.ru/webp/upload/dynamic/2017-06/05/pk-empty.png.webp"
+            height={58}
+            width={26}
+            alt=""
+          />
         </button>
       </div>
     </div>

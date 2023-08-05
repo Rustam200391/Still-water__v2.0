@@ -27,9 +27,11 @@ const ModalComponent = ({ isOpen, onClose }) => (
         </div>
         <div className={style.block__title__place}>
           <label htmlFor="name-sources">Местоположение</label>
+
           <input
             type="text"
             name="name-sources"
+            id="cities"
             className={style.block__title}
           />
         </div>

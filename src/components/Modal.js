@@ -15,7 +15,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
   <Modal isOpen={isOpen} onRequestClose={onClose} className={style.modal}>
     {customModalContent}
 
-    <div className={style.block}>
+    <form className={style.block}>
       <div className={style.block__information}>
         <div className={style.block__title__place}>
           <label for="name-sources">Наименование</label>
@@ -53,6 +53,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
             required
             className={style.block__upload}
           />
+          <input type="submit" value="загрузить" id="submit" />
         </div>
       </div>
       <div>
@@ -65,7 +66,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
           />
         </button>
       </div>
-    </div>
+    </form>
   </Modal>
 );
 

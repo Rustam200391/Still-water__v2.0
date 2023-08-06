@@ -46,7 +46,7 @@ Solution: If you want to use hooks in your Next.js application, you need to use 
 
 To use client components in Next.js, you need to add the use client directive as the first line of your file (before any imports).
 
-When 
+When adding a point with 
 
 ## Deploy on Vercel
 

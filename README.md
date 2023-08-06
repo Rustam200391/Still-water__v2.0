@@ -46,8 +46,7 @@ Solution: If you want to use hooks in your Next.js application, you need to use 
 
 To use client components in Next.js, you need to add the use client directive as the first line of your file (before any imports).
 
-When adding a point with 
-
+When adding a point with coordinates on the map, the request is transmitted to the server, 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

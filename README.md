@@ -46,7 +46,7 @@ Solution: If you want to use hooks in your Next.js application, you need to use 
 
 To use client components in Next.js, you need to add the use client directive as the first line of your file (before any imports).
 
-При добавлении точки с координатами на карте запрос передается серверу,на сервере отсматривается старая советская карта с минералами и фронту передается инфа какими минералами богата эта вода или это грунтовые воды.
+When 
 
 ## Deploy on Vercel
 

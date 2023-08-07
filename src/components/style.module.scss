@@ -21,7 +21,7 @@
 }
 
 .label {
-  display: block;
+  display: inline-block;
 //   margin-bottom: 10px;
 //   min-width: 100px;
   min-height: 40px;
@@ -35,6 +35,19 @@
   border-radius: 5px;
 //   margin-bottom: 20px;
 }
+
+
+.form__input {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.form__button {
+  display: flex;
+  justify-content: center;
+}
+
 
 .submit {
   background-color: #4caf50;

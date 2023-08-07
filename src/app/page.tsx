@@ -23,7 +23,7 @@ const Home = () => {
     <div>
       <h1 className={style.name__app}>Useful water</h1>
       <div className={style.open__modal}>
-        <button className={style.open__modal_button} onClick={openModal} >Добавить источник питьевой воды</button> 
+        <button className={style.open__modal_button} onClick={openModal} >add</button> 
         <ModalComponent isOpen={isOpen} onClose={closeModal} /> 
         </div>
       <Map address={address} />

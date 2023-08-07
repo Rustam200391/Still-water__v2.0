@@ -30,36 +30,45 @@ const ModalComponent = ({ isOpen, onClose }) => (
     </form> */}
     <form className={style.form}>
       <h1 className={style.h1}>Информация об источнике</h1>
-      <label className={style.label} for="name">
-        Наименование:
-      </label>
-      <input
-        className={style.label}
-        type="text"
-        id={style.name}
-        name="name"
-        required
-      />
-      <label className={style.label} for="email">
-        Местоположение:
-      </label>
-      <input type="text" id={style.place} name="place" required />
-      <label className={style.label} for="description">
-        Описание:
-      </label>
-      <textarea id={style.description} name="description" required />
-      <label className={style.label} for="photo">
-        Фото:
-      </label>
-      <input
-        type="file"
-        id={style.photo}
-        capture="user" //environment
-        name="photo"
-        accept="image/*"
-        required
-      />
-      <input type="submit" className={style.submit} value="Отправить" />
+      <div className={style.form__input}>
+        <label className={style.label} for="name">
+          Наименование:
+        </label>
+        <input
+          className={style.label}
+          type="text"
+          id={style.name}
+          name="name"
+          required
+        />
+      </div>
+      <div className={style.form__input}>
+        <label className={style.label} for="email">
+          Местоположение:
+        </label>
+        <input type="text" id={style.place} name="place" required />
+      </div>
+      <div className={style.form__input}>
+        <label className={style.label} for="description">
+          Описание:
+        </label>
+        <textarea id={style.description} name="description" required />
+      </div>
+      <div className={style.form__input}>
+        <label className={style.label} for="photo">
+          Фото:
+        </label>
+        <input
+          type="file"
+          capture="user" //environment
+          name="photo"
+          // accept="image/*"
+          required
+        />
+      </div>
+      <div className={style.form__button}>
+        <input type="submit" className={style.submit} value="Отправить" />
+      </div>
     </form>
 
     <div className={style.close} onClick={onClose}>

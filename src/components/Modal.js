@@ -4,17 +4,13 @@ import style from "./style.module.scss";
 
 // контеннт модального окна
 
-const customModalContent = (
-  <div className={style.close__title}>
-    <h2>Информация об источнике</h2>
-  </div>
-);
+const customModalContent = <div className={style.close__title}></div>;
 
 // компонент модального окна
 const ModalComponent = ({ isOpen, onClose }) => (
   <Modal isOpen={isOpen} onRequestClose={onClose} className={style.modal}>
     {customModalContent}
-    <form className={style.form}>
+    {/* <form className={style.form}>
       <div className="question">
         <input className={style.input} type="text" required />
         <label className={style.label} htmlFor="name">
@@ -31,15 +27,51 @@ const ModalComponent = ({ isOpen, onClose }) => (
         <label className={style.label}>Добавить описание</label>
       </div>
       <button className={style.button}>Добавить</button>
-    </form>
-    <button className={style.close__button} onClick={onClose}>
-      <img
-        src="https://www.magicwaters.ru/webp/upload/dynamic/2017-06/05/pk-empty.png.webp"
-        height={58}
-        width={26}
-        alt=""
+    </form> */}
+    <form className={style.form}>
+      <h1 className={style.h1}>Информация об источнике</h1>
+      <label className={style.label} for="name">
+        Наименование:
+      </label>
+      <input
+        className={style.label}
+        type="text"
+        id={style.name}
+        name="name"
+        required
       />
-    </button>
+      <label className={style.label} for="email">
+        Местоположение:
+      </label>
+      <input type="text" id={style.place} name="place" required />
+      <label className={style.label} for="description">
+        Описание:
+      </label>
+      <textarea id={style.description} name="description" required />
+      <label className={style.label} for="photo">
+        Фото:
+      </label>
+      <input
+        type="file"
+        id={style.photo}
+        capture="user" //environment
+        name="photo"
+        accept="image/*"
+        required
+      />
+      <input type="submit" className={style.submit} value="Отправить" />
+    </form>
+
+    <div className={style.close} onClick={onClose}>
+      <button className={style.close__button}>
+        <img
+          src="https://www.magicwaters.ru/webp/upload/dynamic/2017-06/05/pk-empty.png.webp"
+          height={58}
+          width={26}
+          alt=""
+        />
+      </button>
+    </div>
   </Modal>
 );
 

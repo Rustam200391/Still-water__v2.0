@@ -22,16 +22,18 @@
 
 .label {
   display: block;
-  margin-bottom: 10px;
+//   margin-bottom: 10px;
+//   min-width: 100px;
+  min-height: 40px;
 }
 
 #text,#place,#name
 #description,#file {
-  width: 100%;
+  width: 170px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 20px;
+//   margin-bottom: 20px;
 }
 
 .submit {

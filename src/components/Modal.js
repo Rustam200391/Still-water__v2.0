@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import axios from "axios";
 import style from "./style.module.scss";
@@ -20,7 +20,7 @@ const onSubmit = async (data) => {
       })
       .then((res) => {
         if (res.statusCode === 201) {
-          navigate("/home");
+          console.log("Успешно отправлено:", response.data);
         }
       })
       .catch((err) => {

@@ -50,7 +50,7 @@ When adding a point with coordinates on the map, the request is transmitted to t
 
 To day i have a new <i>task</i>
 
-<i>We use all the charms of typescript</
+<i>We use all the charms of typescript</i
 
 ## Deploy on Vercel
 

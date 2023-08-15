@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ImageUploader } from "../ImageUploader/ImageUploader.jsx";
 import Modal from "react-modal";
 import axios from "axios";
 import style from "./style.module.scss";
@@ -30,6 +31,7 @@ const onSubmit = async (data) => {
     console.log("ошибка", err);
   }
 };
+
 // компонент модального окна
 const ModalComponent = ({ isOpen, onClose }) => (
   <Modal
@@ -77,6 +79,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
           accept="image/*"
           required
         />
+        <ImageUploader />
       </div>
       <div className={style.form__button}>
         <input type="submit" className={style.submit} value="Отправить" />

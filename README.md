@@ -49,7 +49,9 @@ To use client components in Next.js, you need to add the use client directive as
 When adding a point with coordinates on the map, the request is transmitted to the server, an old Soviet map with minerals is viewed on the server and information is transmitted to the front about what minerals this water is rich in or is it groundwater.
 
 To day i have a new <i>task</i>
+
 We use all the charms of typescript
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

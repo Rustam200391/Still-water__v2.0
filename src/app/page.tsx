@@ -2,7 +2,7 @@ import Image from 'next/image';
 "use client"; // This is a client component
 import style from './page.module.css'
 import React, { useState } from 'react';
-import ModalComponent from '../components/Modal';
+import ModalComponent from '../components/Modal/Modal';
 import Map from '../components/Map';
 
 

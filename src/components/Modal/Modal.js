@@ -30,6 +30,7 @@ const onSubmit = async (data) => {
     console.log("ошибка", err);
   }
 };
+
 // компонент модального окна
 const ModalComponent = ({ isOpen, onClose }) => (
   <Modal

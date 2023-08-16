@@ -20,8 +20,8 @@ const onSubmit = async (data) => {
         file: file,
       })
       .then((res) => {
-        if (res.statusCode === 201) {
-          console.log("Успешно отправлено:", response.data);
+        if (res.status === 201) {
+          console.log("Успешно отправлено:");
         }
       })
       .catch((err) => {

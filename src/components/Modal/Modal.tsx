@@ -1,14 +1,26 @@
 import React, { useState } from "react";
-import { ImageUploader } from "../ImageUploader/ImageUploader.jsx";
+import { ImageUploader } from "../ImageUploader/ImageUploader";
 import Modal from "react-modal";
 import axios from "axios";
+import { useForm, SubmitHandler } from "react-hook-form";
 import style from "./style.module.scss";
 
-// контеннт модального окна
-
+// контент модального окна
 const customModalContent = <div className={style.close__title}></div>;
+interface IFormInput {
+  firstName: string
+  lastName: string
+  age: number
+}
 
-const onSubmit = async (data) => {
+const handleSubmit: SubmitHandler<IFormInput>  = (data) => {
+  console.log(data);
+  // Handle form submit logic here
+}
+
+const onSubmit = async (data: any) => {
+  const { register } = useForm<IFormInput>()
+  
   const { name, place, description, file } = data;
   const url = "http://localhost:8000/api/v1/users/";
   try {
@@ -31,7 +43,6 @@ const onSubmit = async (data) => {
     console.log("ошибка", err);
   }
 };
-
 // компонент модального окна
 const ModalComponent = ({ isOpen, onClose }) => (
   <Modal
@@ -42,7 +53,10 @@ const ModalComponent = ({ isOpen, onClose }) => (
   >
     {customModalContent}
 
-    <form className={style.form}>
+    <form
+      className={style.form}
+      action="POST"
+    >
       <h1 className={style.h1}>Информация об источнике</h1>
       <div className={style.form__input}>
         <label className={style.label} htmlFor="name">

@@ -4,8 +4,6 @@
 
 First, run the development server:
 
-
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
@@ -51,6 +49,24 @@ When adding a point with coordinates on the map, the request is transmitted to t
 To day i have a new <i>task</i>
 
 <i>We use all the charms of typescript</i>
+
+Если вы хотите Next.js опасно создавать рабочий код, даже если в вашем приложении есть ошибки, вы можете отключить встроенный этап проверки типов.
+
+Если отключено, убедитесь, что вы запускаете проверку типов как часть процесса сборки или развертывания, иначе это может быть очень опасно.
+
+Откройте next.config.js и включите ignoreBuildErrors опцию в typescript конфигурации:
+
+next.config.js
+
+module.exports = {
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
+}
 
 ## Deploy on Vercel
 

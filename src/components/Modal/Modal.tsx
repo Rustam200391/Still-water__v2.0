@@ -31,8 +31,20 @@ const ModalComponent = ({ isOpen, onClose }) => (
     <form
       className={style.form}
       action="POST"
-    >
-      <h1 className={style.h1}>Информация об источнике</h1>
+    > 
+      <div className={style.title}>
+        <h1 className={style.h1}>Информация об источнике</h1>
+        <div className={style.close} onClick={onClose}>
+      <button className={style.close__button}>
+        <img
+          src="https://www.magicwaters.ru/webp/upload/dynamic/2017-06/05/pk-empty.png.webp"
+          height={58}
+          width={26}
+          alt=""
+        />
+      </button>
+    </div>
+        </div>
       <div className={style.form__input}>
         <label className={style.label} htmlFor="name">
           Наименование:
@@ -73,18 +85,10 @@ const ModalComponent = ({ isOpen, onClose }) => (
       <div className={style.form__button}>
         <input type="submit" className={style.submit} value="Отправить" />
       </div>
+      
     </form>
 
-    <div className={style.close} onClick={onClose}>
-      <button className={style.close__button}>
-        <img
-          src="https://www.magicwaters.ru/webp/upload/dynamic/2017-06/05/pk-empty.png.webp"
-          height={58}
-          width={26}
-          alt=""
-        />
-      </button>
-    </div>
+    
   </Modal>
 );
 

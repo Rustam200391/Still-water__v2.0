@@ -24,6 +24,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
     onRequestClose={onClose}
     ariaHideApp={false}
     className={style.modal}
+    overlayClassName={style.modalOverlay}
   >
     {customModalContent}
 

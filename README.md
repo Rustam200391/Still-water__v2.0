@@ -48,6 +48,24 @@ To use client components in Next.js, you need to add the use client directive as
 
 При добавлении точки с координатами на карте запрос передается серверу,на сервере отсматривается старая советская карта с минералами и фронту передается инфа какими минералами богата эта вода или это грунтовые воды.
 
+Если вы хотите Next.js опасно создавать рабочий код, даже если в вашем приложении есть ошибки, вы можете отключить встроенный этап проверки типов.
+
+Если отключено, убедитесь, что вы запускаете проверку типов как часть процесса сборки или развертывания, иначе это может быть очень опасно.
+
+Откройте next.config.js и включите ignoreBuildErrors опцию в typescript конфигурации:
+
+next.config.js
+
+module.exports = {
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
+}
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

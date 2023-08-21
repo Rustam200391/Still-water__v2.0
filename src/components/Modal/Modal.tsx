@@ -5,11 +5,11 @@ import axios from "axios";
 import style from "./style.module.scss";
 
 
-interface IFormInput {
-  name: string,
-  place: string,
-  description: number,
-  file: File,
+type Data = {
+  name: string;
+  place: string;
+  description: string;
+  file: any;
 }
 // types description
 
@@ -51,7 +51,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
         <input type="text" id={style.place} name="place" required />
       </div>
       <div className={style.form__input}>
-        <label className={style.label} htmlFor="description">
+        <label className={style.label} htmlFor="">
           Описание:
         </label>
         <textarea id={style.description} name="description" required />

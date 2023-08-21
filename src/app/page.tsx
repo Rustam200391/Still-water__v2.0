@@ -20,7 +20,6 @@ const Home = () => {
   
   return (
     <>
-      <h1 className={style.name__app}>Питьевая вода</h1>
       <div className={style.open__modal}>
         <button className={style.open__modal_button} onClick={openModal} >
         <h5>Добавить</h5>

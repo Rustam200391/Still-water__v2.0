@@ -9,7 +9,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-<i></i>
 
 ## Learn More
 
@@ -45,13 +44,13 @@ Solution: If you want to use hooks in your Next.js application, you need to use 
 
 To use client components in Next.js, you need to add the use client directive as the first line of your file (before any imports).
 
-При добавлении точки с координатами на карте запрос передается серверу,на сервере отсматривается старая советская карта с минералами и фронту передается инфа какими минералами богата эта вода или это грунтовые воды.
+When adding a point with coordinates on the map, the request is transmitted to the server, an old Soviet map with minerals is viewed on the server and information is transmitted to the front about what minerals this water is rich in or is it groundwater.
 
-Если вы хотите Next.js опасно создавать рабочий код, даже если в вашем приложении есть ошибки, вы можете отключить встроенный этап проверки типов.
+If you want Next.js it is dangerous to create working code, even if there are errors in your application, you can disable the built-in type checking stage.
 
-Если отключено, убедитесь, что вы запускаете проверку типов как часть процесса сборки или развертывания, иначе это может быть очень опасно.
+If disabled, make sure you run type checking as part of the build or deployment process, otherwise it can be very dangerous.
 
-Откройте next.config.js и включите ignoreBuildErrors опцию в typescript конфигурации:
+Open next.config.js and enable ignoreBuildErrors option in typescript configuration:
 
 next.config.js
 

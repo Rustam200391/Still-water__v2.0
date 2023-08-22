@@ -27,6 +27,10 @@
   padding: 20px;
   border-radius: 45px;
   border: 4px solid black;
+  &__input{
+    display: flex;
+  justify-content: space-between;
+  }
 }
 
 .h1 {
@@ -38,7 +42,15 @@
 //   margin-bottom: 10px;
 //   min-width: 100px;
   min-height: 40px;
+  &:nth-child(2) {
+    margin-left: 4px;
+  }
+  &:nth-child(3) {
+    margin-left: 2px;
+  }
 }
+
+
 
 .title {
   display: flex;
@@ -56,8 +68,7 @@
 
 
 .form__input {
-  display: flex;
-  justify-content: space-between;
+  
 }
 
 

@@ -22,17 +22,18 @@ const Home = () => {
     <>
       <div className={style.open__modal}>
         <button className={style.open__modal_button} onClick={openModal} >
-        <h5>Добавить</h5>
-        <img
+          <h5>Добавить</h5>
+        {/* <img
           src="https://cdn.icon-icons.com/icons2/516/PNG/512/water_drink_bottle_icon-icons.com_51087.png"
-          height={25}
-          width={25}
+          height={10}
+          width={15}
           alt=""
-        />
+        /> */}
 
         </button> 
-        <ModalComponent isOpen={isOpen} onClose={closeModal} /> 
-        </div>
+        
+      </div>
+      <ModalComponent isOpen={isOpen} onClose={closeModal} /> 
       <Map address={address} />
     </>
   );

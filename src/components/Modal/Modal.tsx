@@ -52,7 +52,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
         <input
           className={style.label}
           type="text"
-          id={style.name}
+          id={style.form__input}
           name="name"
           required
         />
@@ -61,13 +61,26 @@ const ModalComponent = ({ isOpen, onClose }) => (
         <label className={style.label} htmlFor="place">
           Местоположение:
         </label>
-        <input type="text" id={style.place} name="place" required />
+        <input
+          className={style.label}
+          type="text"
+          id={style.form__input}
+          name="place"
+          required
+        />
       </div>
       <div className={style.form__input}>
-        <label className={style.label} htmlFor="">
+        <label
+          className={style.label}
+          htmlFor=""
+        >
           Описание:
         </label>
-        <textarea id={style.description} name="description" required />
+        <textarea
+          id={style.form__input}
+          name="description"
+          required
+        />
       </div>
       <div className={style.form__input}>
         <label className={style.label} htmlFor="photo">
@@ -75,6 +88,7 @@ const ModalComponent = ({ isOpen, onClose }) => (
         </label>
         <input
           type="file"
+          className={style.label}
           capture="user" //environment
           name="photo"
           accept="image/*"

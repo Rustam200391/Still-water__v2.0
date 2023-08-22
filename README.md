@@ -46,6 +46,7 @@ To use client components in Next.js, you need to add the use client directive as
 
 When adding a point with coordinates on the map, the request is transmitted to the server, an old Soviet map with minerals is viewed on the server and information is transmitted to the front about what minerals this water is rich in or is it groundwater.
 
+
 If you want Next.js it is dangerous to create working code, even if there are errors in your application, you can disable the built-in type checking stage.
 
 If disabled, make sure you run type checking as part of the build or deployment process, otherwise it can be very dangerous.

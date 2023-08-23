@@ -26,6 +26,8 @@
     "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@types/react-modal": "^3.16.0"
+    "@types/react-modal": "^3.16.0",
+    "husky": "^8.0.3",
+    "webpack-manifest-plugin": "^5.0.0"
   }
 }

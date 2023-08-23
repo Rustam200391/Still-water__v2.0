@@ -18,7 +18,29 @@ type Data = {
 // контент модального окна
 const customModalContent = <div className={style.close__title}></div>;
 // компонент модального окна
+const handleSubmit = (event) => {
+  event.preventDefault(); // Остановит отправку формы, чтобы страница не перезагружалась
+  const formData = new FormData(event.target); // Создает объект FormData из формы
+  const url = "/..."; // Замените на URL вашего бэкенда
+
+  fetch(url, {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Ответ от бэкенда:", data);
+      // Обрабатывайте ответ от бэкенда здесь
+    })
+    .catch((error) => {
+      console.error("Ошибка при отправке данных:", error);
+      // Обрабатывайте ошибку здесь
+    });
+};
 const ModalComponent = ({ isOpen, onClose }) => (
+  
+
+
   <Modal
     isOpen={isOpen}
     onRequestClose={onClose}
@@ -31,20 +53,21 @@ const ModalComponent = ({ isOpen, onClose }) => (
     <form
       className={style.form}
       action="POST"
-    > 
+      onSubmit={handleSubmit}
+    >
       <div className={style.title}>
         <h1 className={style.h1}>Информация об источнике</h1>
         <div className={style.close} onClick={onClose}>
-      <button className={style.close__button}>
-        <img
-          src="https://www.magicwaters.ru/webp/upload/dynamic/2017-06/05/pk-empty.png.webp"
-          height={58}
-          width={26}
-          alt=""
-        />
-      </button>
-    </div>
+          <button className={style.close__button}>
+            <img
+              src="https://www.magicwaters.ru/webp/upload/dynamic/2017-06/05/pk-empty.png.webp"
+              height={58}
+              width={26}
+              alt=""
+            />
+          </button>
         </div>
+      </div>
       <div className={style.form__input}>
         <label className={style.label} htmlFor="name">
           Наименование:
@@ -84,8 +107,8 @@ const ModalComponent = ({ isOpen, onClose }) => (
       </div>
       <div className={style.form__input}>
         <div className={style.form__input__label}>
-        <label className={style.label} htmlFor="photo">
-          Фото:
+          <label className={style.label} htmlFor="photo">
+            Фото:
           </label>
         </div>
         

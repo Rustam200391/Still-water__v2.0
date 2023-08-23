@@ -83,16 +83,20 @@ const ModalComponent = ({ isOpen, onClose }) => (
         />
       </div>
       <div className={style.form__input}>
+        <div className={style.form__input__label}>
         <label className={style.label} htmlFor="photo">
           Фото:
-        </label>
+          </label>
+        </div>
+        
         <input
           type="file"
-          className={style.label}
+          className={style.label__input}
           capture="user" //environment
           name="photo"
           accept="image/*"
           required
+          title=""
         />
         <ImageUploader />
       </div>

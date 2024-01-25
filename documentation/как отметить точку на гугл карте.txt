@@ -1,0 +1,83 @@
+Для отметки точки на карте Google в приложении React вам понадобится использовать библиотеку для работы с картами. Одной из популярных библиотек является `react-google-maps`.
+
+Вот пример шагов, которые вы можете выполнить, чтобы отметить точку на карте Google в приложении React
+
+1. Установите `react-google-maps` с помощью npm или yarn
+```
+npm install react-google-maps
+```
+или
+```
+yarn add react-google-maps
+```
+
+2. Создайте компонент, который будет отображать карту и точку на ней. Например, `MapComponent.js`
+```jsx
+import React from 'react';
+import { GoogleMap, Marker } from 'react-google-maps';
+
+const MapComponent = () = {
+  const mapContainerStyle = {
+    width '100%',
+    height '400px',
+  };
+
+  const center = {
+    lat 51.5074,  Широта
+    lng -0.1278,  Долгота
+  };
+
+  const markerPosition = {
+    lat 51.5074,  Широта точки
+    lng -0.1278,  Долгота точки
+  };
+
+  return (
+    GoogleMap
+      mapContainerStyle={mapContainerStyle}
+      center={center}
+      zoom={12}
+    
+      Marker position={markerPosition} 
+    GoogleMap
+  );
+};
+
+export default MapComponent;
+```
+
+3. Импортируйте `MapComponent` в ваш основной компонент и добавьте его в разметку
+```jsx
+import React from 'react';
+import MapComponent from '.MapComponent';
+
+const App = () = {
+  return (
+    div
+      h1Мое приложение с картой Googleh1
+      MapComponent 
+    div
+  );
+};
+
+export default App;
+```
+
+4. Зарегистрируйтесь на Google Cloud Platform (httpscloud.google.com) и создайте проект для получения API-ключа.
+
+5. Вставьте свой API-ключ в компонент `MapComponent.js`
+```jsx
+GoogleMap
+  mapContainerStyle={mapContainerStyle}
+  center={center}
+  zoom={12}
+  options={{
+     Здесь вставьте свой API-ключ
+    apiKey 'YOUR_API_KEY',
+  }}
+
+```
+
+Теперь, когда вы запустите ваше приложение React, вы должны увидеть карту Google с отмеченной точкой на ней. Убедитесь, что указали правильные координаты широты и долготы для вашей точки.
+
+Обратите внимание, что это только базовый пример, и вы можете настроить карту и маркер согласно вашим потребностям, используя документацию `react-google-maps` (httpsreact-google-maps-api-docs.netlify.app).

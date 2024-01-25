@@ -1,0 +1,54 @@
+Установите пакет @react-google-maps/api с помощью команды npm install @react-google-maps/api или yarn add @react-google-maps/api.
+
+Создайте компонент Map и импортируйте его в нужный файл:
+
+javascript
+Copy code
+import { GoogleMap, Marker } from "@react-google-maps/api";
+
+const Map = () => {
+  const mapContainerStyle = {
+    width: "400px",
+    height: "400px"
+  };
+
+  const center = {
+    lat: 51.5074,
+    lng: -0.1278
+  };
+
+  const markerPosition = {
+    lat: 51.5074,
+    lng: -0.1278
+  };
+
+  return (
+    <div>
+      <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        center={center}
+        zoom={10}
+      >
+        <Marker position={markerPosition} />
+      </GoogleMap>
+    </div>
+  );
+};
+
+export default Map;
+Используйте компонент Map в нужном файле:
+javascript
+Copy code
+import Map from "./Map";
+
+const MyPage = () => {
+  return (
+    <div>
+      <h1>Моя страница</h1>
+      <Map />
+    </div>
+  );
+};
+
+export default MyPage;
+В этом примере мы создаем компонент Map, который отображает карту Google Maps с центром в Лондоне (широта: 51.5074, долгота: -0.1278) и вставляет маркер на эту точку. 

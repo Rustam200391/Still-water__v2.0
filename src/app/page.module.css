@@ -1,15 +1,16 @@
 @font-face {
-font-family:"OpenSans-Semibold" ;
-src: url("../assets/OpenSans/Montserrat_Alternates/MontserratAlternates-BlackItalic.ttf");
-/* семейство шрифтов: 'OpenSans'; */
-font-weight: 400;
-font-style: normal;
+  font-family: "OpenSans-Semibold";
+  src: url("../assets/OpenSans/Montserrat_Alternates/MontserratAlternates-BlackItalic.ttf");
+  /* семейство шрифтов: 'OpenSans'; */
+  font-weight: 400;
+  font-style: normal;
 }
 
 .name__app {
   text-align: center;
   background-color: rgb(22, 239, 239);
   border-radius: 45px;
+  
 }
 
 .open__modal {
@@ -26,7 +27,6 @@ font-style: normal;
   font-weight: 700;
   font-size: larger;
 }
-
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {

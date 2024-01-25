@@ -5,23 +5,27 @@ import axios from "axios";
 import style from "./style.module.scss";
 
 
-type Data = {
+
+// types description
+interface descriptionModal {
   name: string;
   place: string;
   description: string;
-  file: any;
+  file: object;
 }
-// types description
-
 
 
 // контент модального окна
 const customModalContent = <div className={style.close__title}></div>;
+
+// description file types for typescript
+  
 // компонент модального окна
 const handleSubmit = (event) => {
   event.preventDefault(); // Остановит отправку формы, чтобы страница не перезагружалась
   const formData = new FormData(event.target); // Создает объект FormData из формы
-  const url = "/..."; // Замените на URL вашего бэкенда
+  const url = "/api/endpoint"; 
+  // Замените на URL вашего бэкенда
 
   fetch(url, {
     method: "POST",
@@ -39,8 +43,6 @@ const handleSubmit = (event) => {
 };
 const ModalComponent = ({ isOpen, onClose }) => (
   
-
-
   <Modal
     isOpen={isOpen}
     onRequestClose={onClose}

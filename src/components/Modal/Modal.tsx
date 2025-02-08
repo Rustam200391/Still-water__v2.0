@@ -134,10 +134,10 @@ const ModalComponent = ({ isOpen, onClose }) => {
             className={style.label}
             htmlFor="description"
           >
-            Описание:
+            Описание места:
           </label>
           <textarea
-            id={style.form__input}
+            id={style.label}
             name="description"
             value={formData.description}
             onChange={handleChange}
@@ -150,16 +150,7 @@ const ModalComponent = ({ isOpen, onClose }) => {
               Фото:
             </label>
           </div>
-          <input
-            type="file"
-            className={style.label__input}
-            capture="user" //environment
-            name="photo"
-            accept="image/*"
-            onChange={handleFileChange}
-            required
-            title=""
-          />
+    
           <ImageUploader />
         </div>
         <div className={style.form__button}>
